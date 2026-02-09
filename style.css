@@ -98,8 +98,8 @@ img {
   gap: 10px;
   font-size: 0.9rem;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  padding: 10px 12px;
+  justify-content: center;
+  padding: 5px 12px;
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -183,6 +183,63 @@ section {
   padding: 14px 16px 18px;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.inline-photos {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.inline-photos figure {
+  margin: 0;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.inline-photos img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.inline-photos figcaption {
+  padding: 12px 14px 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid figcaption {
+  padding: 12px 14px 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .hero {
@@ -509,6 +566,7 @@ h3 {
 
   .site-nav.is-open {
     display: flex;
+    z-index: 10;
   }
 
   .nav-toggle {
