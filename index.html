@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lyckosvansen - Nose Work</title>
+  <meta name="description" content="Lyckosvansen – Nose Work, glädje och samspel. Bygg en starkare relation med din hund genom Nose Work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header" id="top">
+      <div class="logoandname">
+      <img id="logo" src="/img/lyckosvansen_black_retriever_transparent.png" alt="Doggy icon">
+      <div class="brand">
+        <span class="brand-mark">Lyckosvansen</span>
+        <span class="brand-tag">Nose Work & Samspel</span>
+      </div>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        Meny
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="#home" data-route>Välkommen till Lyckosvansen</a>
+        <a href="#kurser" data-route>Hundkurser privatlektioner</a>
+        <a href="#kontaktinfo" data-route>Kontaktinformation</a>
+        <a href="#om" data-route>Om Lyckosvansen AB</a>
+        <a href="#nosework" data-route>Vad är Nose Work?</a>
+        <a href="#hoopers" data-route>Vad är Hoopers?</a>
+        <a href="#anmalan" data-route>Anmälan kurs</a>
+        <a href="#blogg" data-route>Blogg</a>
+      </nav>
+    </header>
+
+    <main>
+      <div id="app-main" class="page-route" aria-live="polite"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span class="brand-mark">Lyckosvansen</span>
+        <p>Nose Work, relation och glädje.</p>
+      </div>
+      <div class="footer-links">
+        <span>© 2026 Lyckosvansen</span>
+        <span>Västerås, Sverige</span>
+      </div>
+    </footer>
+  </div>
+
+  <template id="tpl-home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Välkommen till Lyckosvansen</p>
+        <h1>Välkommen till Lyckosvansen</h1>
+        <p class="lead">
+          Hej och välkommen till Lyckosvansen. Lyckosvansen ägnar sig helhjärtat åt hundar och hundsporten Nosework, det vill säga det bästa som finns!
+          Från och med våren 2026 utökar vi även med hundsporten Hoopers.
+        </p>
+        <p class="lead">
+          Lyckosvansen erbjuder privatlektioner och kurser. Nosework är ett roligt och enkelt sätt att aktivera sin hund, alla hundar kan delta!
+          Nosework är även en superrolig hundsport som man kan tävla i om man är intresserad av det. Det samma gäller Hoopers.
+        </p>
+        <p class="lead">
+          Lyckosvansen drivs av Laila som är certifierad SNWK instruktör och av SNWK auktoriserad doftprovsdomare. Laila är även av SNWK utbildad tävlingsledare.
+          Laila är snart även certifierad SHOK instruktör i Hoopers. Laila tävlar aktivt med alla sina fyra hundar i Nosework. Vi finns i Västerås.
+        </p>
+        <div class="hero-actions">
+          <a class="btn ghost" href="#om" data-route>Om Lyckosvansen AB</a>
+          <a class="btn primary" href="#nosework" data-route>Vad är Nose Work?</a>
+        </div>
+      </div>
+    </section>
+    <section class="feature">
+      <figure class="feature-figure">
+        <img src="https://lyckosvansen.se/wp-content/uploads/2026/01/resized_20250824_1649520_1756047551791-1-768x1024.jpg" alt="Laila och Vera, Nosework tävling, TSM1 Nora september 2025." />
+        <figcaption>Laila och Vera, Nosework tävling, TSM1 Nora september 2025.</figcaption>
+      </figure>
+    </section>
+  </template>
+
+  <template id="tpl-kurser">
+    <section class="section">
+      <div class="section-title">
+        <p class="eyebrow">Hundkurser & Privatlektioner</p>
+        <h2>Kurser som anpassas efter er.</h2>
+        <p class="section-lead">Vi erbjuder privatlektioner och kurser inom Nosework och Hoopers för alla nivåer.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Privatlektioner</h3>
+          <p>Individuell plan för er nivå, tempo och mål.</p>
+        </article>
+        <article class="card">
+          <h3>Kurser</h3>
+          <p>Små grupper med trygg handledning och tydlig progression.</p>
+        </article>
+        <article class="card">
+          <h3>Tematräning</h3>
+          <p>Fokus på moment som dofter, markeringar och uthållighet.</p>
+        </article>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-kontaktinfo">
+    <section class="section">
+      <div class="section-title">
+        <p class="eyebrow">Kontaktinformation</p>
+        <h2>Hör av dig</h2>
+        <p class="section-lead">Frågor, bokningar eller funderingar? Kontakta oss.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Email</h3>
+          <p><a href="mailto:info@lyckosvansen.se">info@lyckosvansen.se</a></p>
+        </article>
+        <article class="card">
+          <h3>Plats</h3>
+          <p>Västerås, Sverige</p>
+        </article>
+        <article class="card">
+          <h3>Socialt</h3>
+          <p>Instagram och Facebook</p>
+        </article>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-om">
+    <section class="section">
+      <div class="section-title">
+        <p class="eyebrow">Om Lyckosvansen AB</p>
+        <h2>Vem vi är</h2>
+        <p class="section-lead">Lyckosvansen drivs av Laila – certifierad SNWK-instruktör och doftprovsdomare.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-step">1</span>
+          <div>
+            <h3>Erfarenhet</h3>
+            <p>Flera års tävling och utbildning inom Nosework.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-step">2</span>
+          <div>
+            <h3>Trygghet</h3>
+            <p>Fokus på hundens glädje och förarens trygghet.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-step">3</span>
+          <div>
+            <h3>Västerås</h3>
+            <p>Vi finns i Västerås och välkomnar ekipage i alla nivåer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-nosework">
+    <section class="section">
+      <div class="section-title">
+        <p class="eyebrow">Vad är Nose Work?</p>
+        <h2>Hundens naturliga styrka</h2>
+        <p class="section-lead">Nosework låter hunden använda sin fantastiska nos och stärker samspel och fokus.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Dofter</h3>
+          <p>Eukalyptus, lagerblad och lavendel.</p>
+        </article>
+        <article class="card">
+          <h3>Klasser</h3>
+          <p>NW1, NW2, NW3 och NW Elit.</p>
+        </article>
+        <article class="card">
+          <h3>Alla kan delta</h3>
+          <p>Passar alla hundar, oavsett ras eller ålder.</p>
+        </article>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-hoopers">
+    <section class="section">
+      <div class="section-title">
+        <p class="eyebrow">Vad är Hoopers?</p>
+        <h2>Flow, fokus och glädje</h2>
+        <p class="section-lead">Hoopers är en skonsam och rolig hundsport med hinder på distans.</p>
+      </div>
+      <div class="sport-layout">
+        <div class="sport-media">
+          <div class="media-placeholder tall">Bild</div>
+        </div>
+        <div class="sport-content">
+          <div class="info-block">
+            <h3>Skonsamt</h3>
+            <p>Ingen hoppning – passar många hundar och förare.</p>
+          </div>
+          <div class="info-block">
+            <h3>Samarbete</h3>
+            <p>Kommunikation och styrning på avstånd.</p>
+          </div>
+          <div class="info-block accent">
+            <h3>Våren 2026</h3>
+            <p>Lyckosvansen utökar även med Hoopers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-anmalan">
+    <section class="section">
+      <div class="section-title">
+        <p class="eyebrow">Anmälan kurs</p>
+        <h2>Så fungerar anmälan</h2>
+        <p class="section-lead">Anmäl dig via mail så återkommer vi med tider och upplägg.</p>
+      </div>
+      <div class="cta-inner">
+        <div>
+          <p class="eyebrow">Anmälan</p>
+          <h2>Boka din plats</h2>
+          <p>Skicka en kort beskrivning om dig och din hund.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="mailto:info@lyckosvansen.se">Maila oss</a>
+          <a class="btn ghost" href="#kurser" data-route>Se kurser</a>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-blogg">
+    <section class="section">
+      <div class="section-title">
+        <p class="eyebrow">Blogg</p>
+        <h2>Senaste inläggen</h2>
+      </div>
+      <article class="blog-card">
+        <div class="blog-media">
+          <img src="/img/resized_20251231_104252_1769356423297.jpg" alt="">
+        </div>
+        <div class="blog-content">
+          <p class="blog-meta">25 april 2025 • Laila Gren</p>
+          <h3>Tävling med Ruth utanför Karlskoga</h3>
+          <p>
+            Den 12:e april hade jag och Ruth kul på vårt äventyr utanför Karlskoga.
+            Det blev vår sista klass 1-tävling när vi tog det sista diplomet i NW1 TEM fordon.
+            Vi placerade oss som 3:a i moment 2 och som 1:a totalt tack vare jämna söktider.
+          </p>
+          <a class="btn ghost" href="#kontaktinfo" data-route>Läs mer</a>
+        </div>
+      </article>
+    </section>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
