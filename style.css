@@ -47,13 +47,18 @@ img {
 .site-header {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 24px 24px 0;
+  padding: 16px 24px;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 20px;
   align-items: center;
   position: relative;
   z-index: 20;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(222, 210, 196, 0.9);
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 12px 34px rgba(34, 31, 26, 0.08);
+  backdrop-filter: blur(10px);
 }
 
 .logoandname {
@@ -68,14 +73,29 @@ img {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-left: 1em;
+  margin-left: 0.4em;
+  padding: 6px 10px 6px 6px;
+  border-radius: 16px;
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.logoandname:hover {
+  background: rgba(122, 92, 60, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(34, 31, 26, 0.07);
+}
+
+.logoandname:focus-visible {
+  outline: 2px solid rgba(122, 92, 60, 0.38);
+  outline-offset: 2px;
 }
 
 #logo {
-  width: 7rem;
-  height: 7rem;
+  width: 5.2rem;
+  height: 5.2rem;
   object-fit: contain;
   display: block;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08));
 }
 
 .brand {
@@ -86,42 +106,44 @@ img {
 
 .brand-mark {
   font-family: "Fraunces", serif;
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   letter-spacing: 0.5px;
 }
 
 .brand-tag {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--muted);
 }
 
 .site-nav {
   display: flex;
-  gap: 10px;
-  font-size: 0.9rem;
+  gap: 8px;
+  font-size: 0.86rem;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 5px 12px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid var(--line);
+  padding: 6px 8px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(249, 245, 240, 0.84));
+  border: 1px solid rgba(222, 210, 196, 0.95);
   border-radius: 999px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 12px 24px rgba(34, 31, 26, 0.08);
 }
 
 .site-nav a {
-  padding: 8px 14px;
+  padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid transparent;
-  background: rgba(255, 255, 255, 0.85);
-  color: var(--ink);
-  font-weight: 500;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(122, 92, 60, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  color: #2f2a25;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .site-nav a:hover {
-  background: rgba(122, 92, 60, 0.12);
-  border-color: rgba(122, 92, 60, 0.2);
+  background: linear-gradient(145deg, rgba(122, 92, 60, 0.18), rgba(122, 92, 60, 0.1));
+  border-color: rgba(122, 92, 60, 0.3);
   transform: translateY(-1px);
+  box-shadow: 0 10px 16px rgba(34, 31, 26, 0.08);
 }
 
 .site-nav a:focus-visible {
@@ -131,11 +153,13 @@ img {
 
 .nav-toggle {
   display: none;
-  border: 1px solid var(--line);
-  background: var(--card);
+  border: 1px solid rgba(122, 92, 60, 0.2);
+  background: linear-gradient(145deg, #ffffff, #f4ece3);
   padding: 8px 12px;
   border-radius: 999px;
   font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 10px 18px rgba(34, 31, 26, 0.1);
 }
 
 main {
@@ -788,6 +812,143 @@ h3 {
   font-size: 0.96rem;
 }
 
+.hoopers-page .section-title {
+  margin-bottom: 24px;
+}
+
+.hoopers-page .section-title h2 {
+  font-size: clamp(2.4rem, 3vw + 1rem, 4.2rem);
+}
+
+.hoopers-copy {
+  max-width: 1060px;
+  color: #5b6880;
+}
+
+.hoopers-copy p {
+  margin: 0 0 24px;
+  line-height: 1.45;
+  font-size: 1.03rem;
+}
+
+.hoopers-list {
+  margin: 0 0 24px;
+  padding-left: 58px;
+  color: #5b6880;
+}
+
+.hoopers-list li {
+  margin: 0 0 14px;
+  font-size: 1.03rem;
+  line-height: 1.45;
+}
+
+.hoopers-copy a {
+  color: #4e6180;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-list-page .section-title {
+  max-width: 980px;
+  margin-bottom: 24px;
+}
+
+.blog-list-page .section-title h2 {
+  font-size: clamp(3rem, 3.8vw + 1rem, 5rem);
+}
+
+.blog-list-page .section-lead {
+  font-size: 1.05rem;
+}
+
+.blog-preview-card {
+  max-width: 980px;
+  background: #e8edf6;
+  border: 1px solid #dbe2ee;
+  border-radius: 0;
+  padding: 24px 26px;
+}
+
+.blog-category,
+.blog-category a {
+  color: #5f7090;
+  font-size: 0.9rem;
+}
+
+.blog-preview-card h3 {
+  margin: 12px 0 10px;
+}
+
+.blog-preview-card h3 a {
+  color: #263652;
+}
+
+.blog-preview-meta {
+  margin: 0 0 14px;
+  color: #5f7090;
+}
+
+.blog-preview-meta a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-preview-excerpt {
+  margin: 0;
+  color: #5f7090;
+}
+
+.blog-detail-page {
+  max-width: 860px;
+}
+
+.blog-post h2 {
+  font-size: clamp(2.3rem, 3vw + 1rem, 4.2rem);
+  margin-bottom: 14px;
+}
+
+.blog-post-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0 0 20px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.blog-post-meta span:nth-child(2) {
+  color: #39a2e4;
+}
+
+.blog-post-intro {
+  color: #5b6880;
+  line-height: 1.5;
+  font-size: 1.02rem;
+  margin: 0 0 22px;
+}
+
+.blog-post-figure {
+  margin: 0 0 18px;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.blog-post-figure img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.blog-tag {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #d3dae5;
+  border-radius: 8px;
+  color: #5f7090;
+  font-size: 0.95rem;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -943,23 +1104,25 @@ h3 {
   .site-header {
     display: flex;
     flex-direction: column;
+    padding: 14px 20px;
+    border-radius: 0 0 20px 20px;
   }
   
   .logoandname {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin-left: 0;
+    align-self: flex-start;
   }
 
   .site-nav {
     display: none;
     flex-direction: column;
-    background: var(--card);
+    background: linear-gradient(155deg, #fff, #f7f0e8);
     border-radius: var(--radius);
-    border: 1px solid var(--line);
+    border: 1px solid rgba(222, 210, 196, 0.95);
     padding: 12px;
     position: absolute;
-    right: 24px;
-    top: 72px;
+    right: 16px;
+    top: 76px;
     box-shadow: var(--shadow);
     z-index: 200;
   }
@@ -1000,7 +1163,16 @@ h3 {
   }
 
   .site-header {
-    padding: 20px;
+    padding: 14px 16px;
+  }
+
+  #logo {
+    width: 4.6rem;
+    height: 4.6rem;
+  }
+
+  .brand-mark {
+    font-size: 1.35rem;
   }
 
   .kurser-private .section-lead {
@@ -1048,6 +1220,28 @@ h3 {
   .nosework-sport-card img {
     aspect-ratio: auto;
     object-fit: contain;
+  }
+
+  .hoopers-page .section-title h2 {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  }
+
+  .hoopers-copy p,
+  .hoopers-list li {
+    font-size: 1rem;
+  }
+
+  .hoopers-list {
+    padding-left: 28px;
+  }
+
+  .blog-preview-card {
+    padding: 20px 18px;
+  }
+
+  .blog-post-meta {
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
   .nosework-triptych img,

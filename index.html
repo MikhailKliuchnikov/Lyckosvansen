@@ -13,13 +13,13 @@
 <body>
   <div class="page">
     <header class="site-header" id="top">
-      <div class="logoandname">
-      <img id="logo" src="img/lyckosvansen_black_retriever_transparent.png" alt="Doggy icon">
-      <div class="brand">
-        <span class="brand-mark">Lyckosvansen</span>
-        <span class="brand-tag">Nose Work & Samspel</span>
-      </div>
-      </div>
+      <a class="logoandname" href="#home" data-route aria-label="Gå till Välkommen till Lyckosvansen">
+        <img id="logo" src="img/lyckosvansen_black_retriever_transparent.png" alt="Doggy icon">
+        <div class="brand">
+          <span class="brand-mark">Lyckosvansen</span>
+          <span class="brand-tag">Nose Work & Samspel</span>
+        </div>
+      </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
         Meny
       </button>
@@ -118,7 +118,7 @@
         </p>
       </div>
       <figure class="kurser-photo">
-        <img src="/img/ticky_över_på_urvalsbana.jpg" alt="Hund i nosework-träning på urvalsbana">
+        <img src="img/ticky_över_på_urvalsbana.jpg" alt="Hund i nosework-träning på urvalsbana">
         <figcaption>Tick över på urvalsbana, april 2025.</figcaption>
       </figure>
     </section>
@@ -135,7 +135,7 @@
         <p><strong>Adress:</strong> Mällringe 7, Västerås</p>
       </div>
       <figure class="contact-photo">
-        <img src="/img/Laila_with_hela_flocken.jpg" alt="Laila med hela flocken vid vinterlandskap i februari 2025">
+        <img src="img/Laila_with_hela_flocken.jpg" alt="Laila med hela flocken vid vinterlandskap i februari 2025">
         <figcaption><span>Laila med hela flocken</span> i februari 2025. Misan i förgrunden är numera en änglahund.</figcaption>
       </figure>
     </section>
@@ -164,7 +164,7 @@
         </p>
       </div>
       <figure class="about-photo">
-        <img src="/img/Mats_Ruth_Jag.jpg" alt="Maken Mats, Ruth och Laila">
+        <img src="img/Mats_Ruth_Jag.jpg" alt="Maken Mats, Ruth och Laila">
         <figcaption>Maken Mats, Ruth och jag.</figcaption>
       </figure>
       <div class="about-copy">
@@ -211,7 +211,7 @@
         </p>
       </div>
       <figure class="nosework-photo">
-        <img src="/img/thumbnail_IMG_6675.jpg" alt="Ruth i inomhussök med tydligt hittande">
+        <img src="img/thumbnail_IMG_6675.jpg" alt="Ruth i inomhussök med tydligt hittande">
         <figcaption>Ruth i inomhussök med tydligt hittande, december 2025.</figcaption>
       </figure>
       <div class="nosework-copy nosework-copy-extended">
@@ -224,13 +224,13 @@
       </div>
       <div class="nosework-triptych">
         <figure>
-          <img src="/img/BigSectionVera1.jpg" alt="Hund i inomhussök vid hyllsystem">
+          <img src="img/BigSectionVera1.jpg" alt="Hund i inomhussök vid hyllsystem">
         </figure>
         <figure>
-          <img src="/img/BigSectionVera2.jpg" alt="Hund i inomhussök under pågående markering">
+          <img src="img/BigSectionVera2.jpg" alt="Hund i inomhussök under pågående markering">
         </figure>
         <figure>
-          <img src="/img/BigSectionVera3.jpg" alt="Hund i inomhussök med fokus vid gömma">
+          <img src="img/BigSectionVera3.jpg" alt="Hund i inomhussök med fokus vid gömma">
         </figure>
       </div>
       <div class="nosework-copy nosework-copy-extended">
@@ -354,40 +354,30 @@
   </template>
 
   <template id="tpl-hoopers">
-    <section class="section">
+    <section class="section hoopers-page">
       <div class="section-title">
-        <p class="eyebrow">Vad är Hoopers?</p>
-        <h2>Flow, fokus och glädje</h2>
-        <p class="section-lead">Hoopers är en skonsam och rolig hundsport med hinder på distans.</p>
+        <h2>Vad är Hoopers?</h2>
       </div>
-      <div class="sport-layout">
-        <div class="sport-media">
-          <div class="media-placeholder tall">Bild</div>
-        </div>
-        <div class="sport-content">
-          <div class="info-block">
-            <h3>Skonsamt</h3>
-            <p>Ingen hoppning – passar många hundar och förare.</p>
-          </div>
-          <div class="info-block">
-            <h3>Samarbete</h3>
-            <p>Kommunikation och styrning på avstånd.</p>
-          </div>
-          <div class="info-block accent">
-            <h3>Våren 2026</h3>
-            <p>Lyckosvansen utökar även med Hoopers.</p>
-          </div>
-        </div>
-      </div>
-      <div class="inline-photos">
-        <figure>
-          <img src="/img/img_0007.jpg" alt="Hoopers inspiration">
-          <figcaption>Rörelseglädje och smidig handling.</figcaption>
-        </figure>
-        <figure>
-          <img src="/img/img_6895.jpg" alt="Hoopers ekipage">
-          <figcaption>Tryggt samarbete med tydlig riktning.</figcaption>
-        </figure>
+      <div class="hoopers-copy">
+        <p>
+          Hoopers är en hundsport där målet är att hunden ska ta sig igenom en hinderbana på egen tass utan fel.
+          Målet är att föraren står kvar på en plats och dirigerar hunden på distans (föraren ska alltså inte springa med hunden som i agility).
+          Banan består av olika hinder:
+        </p>
+        <ul class="hoopers-list">
+          <li>hoops (bågar),</li>
+          <li>tunnlar,</li>
+          <li>tunnor och</li>
+          <li>staket.</li>
+        </ul>
+        <p>
+          Hoopers är en rolig form av aktivering för alla men också en officiell hundsport som man kan tävla i.
+          I hoopers förekommer inga hopp och endast mjuka svängar.
+        </p>
+        <p>
+          Mer information finns på:
+          <a href="https://www.svenskahoopersklubben.se" target="_blank" rel="noopener noreferrer">Svenska Hoopersklubben</a>
+        </p>
       </div>
     </section>
   </template>
@@ -414,25 +404,36 @@
   </template>
 
   <template id="tpl-blogg">
-    <section class="section">
+    <section class="section blog-list-page">
       <div class="section-title">
-        <p class="eyebrow">Blogg</p>
-        <h2>Senaste inläggen</h2>
+        <h2>Nose Work bloggen</h2>
+        <p class="section-lead">Här får du följa min resa med Nose Work samt tankar från träning, tävling och vardag.</p>
       </div>
-      <article class="blog-card">
-        <div class="blog-media">
-          <img src="img/resized_20251231_104252_1769356423297.jpg" alt="">
-        </div>
-        <div class="blog-content">
-          <p class="blog-meta">25 april 2025 • Laila Gren</p>
-          <h3>Tävling med Ruth utanför Karlskoga</h3>
-          <p>
-            Den 12:e april hade jag och Ruth kul på vårt äventyr utanför Karlskoga.
-            Det blev vår sista klass 1-tävling när vi tog det sista diplomet i NW1 TEM fordon.
-            Vi placerade oss som 3:a i moment 2 och som 1:a totalt tack vare jämna söktider.
-          </p>
-          <a class="btn ghost" href="#kontaktinfo" data-route>Läs mer</a>
-        </div>
+      <article class="blog-preview-card">
+        <p class="blog-category"><a href="#blogg-ruth" data-route>Uncategorized</a></p>
+        <h3><a href="#blogg-ruth" data-route>Tävling med Ruth utanför Karlskoga</a></h3>
+        <p class="blog-preview-meta">Posted on april 25, 2025 av <a href="#om" data-route>Laila Gren</a></p>
+        <p class="blog-preview-excerpt">
+          Den 12:e april hade jag och Ruth kul på vårt äventyr utanför Karlskoga. Det blev våran sista klass 1-tävling efter att vi fixade det sista diplomet i NW1 TEM fordon...
+        </p>
+      </article>
+    </section>
+  </template>
+
+  <template id="tpl-blogg-ruth">
+    <section class="section blog-detail-page">
+      <article class="blog-post">
+        <h2>Tävling med Ruth utanför Karlskoga</h2>
+        <p class="blog-post-meta"><span>april 25, 2025</span> <span>•</span> <span>Laila Gren</span></p>
+        <p class="blog-post-intro">
+          Den 12:e april hade jag och Ruth kul på vårt äventyr utanför Karlskoga. Det blev våran sista klass 1 tävling
+          eftersom vi fixade det sista diplomet i NW1 TEM fordon. Vi placerade oss som 3:a i moment 2 och som 1:a i
+          totalen tack för jämna söktider!
+        </p>
+        <figure class="blog-post-figure">
+          <img src="img/img_6907.jpg" alt="Ruth med rosetter och diplom">
+        </figure>
+        <p class="blog-tag">Uncategorized</p>
       </article>
     </section>
   </template>
@@ -446,19 +447,19 @@
       </div>
       <div class="gallery-grid">
         <figure>
-          <img src="/img/img_0007.jpg" alt="Nose Work träning">
+          <img src="img/img_0007.jpg" alt="Nose Work träning">
           <figcaption>Träning med fokus.</figcaption>
         </figure>
         <figure>
-          <img src="/img/img_6895.jpg" alt="Hund och förare">
+          <img src="img/img_6895.jpg" alt="Hund och förare">
           <figcaption>Samspel i rörelse.</figcaption>
         </figure>
         <figure>
-          <img src="/img/resized_20251231_114957_1769355160378.jpg" alt="Tävlingsmiljö">
+          <img src="img/resized_20251231_114957_1769355160378.jpg" alt="Tävlingsmiljö">
           <figcaption>Tävling och gemenskap.</figcaption>
         </figure>
         <figure>
-          <img src="/img/resized_20251231_104252_1769356423297.jpg" alt="Nose Work sök">
+          <img src="img/resized_20251231_104252_1769356423297.jpg" alt="Nose Work sök">
           <figcaption>Nyfiken nos på jobbet.</figcaption>
         </figure>
       </div>
