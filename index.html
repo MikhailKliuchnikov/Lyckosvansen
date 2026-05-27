@@ -13,27 +13,36 @@
 <body>
   <div class="page">
     <header class="site-header" id="top">
-      <a class="logoandname" href="#home" data-route aria-label="Gå till Välkommen till Lyckosvansen">
-        <img id="logo" src="img/lyckosvansen_black_retriever_transparent.png" alt="Doggy icon">
-        <div class="brand">
-          <span class="brand-mark">Lyckosvansen</span>
-          <span class="brand-tag">Nose Work & Samspel</span>
-        </div>
-      </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
-        Meny
-      </button>
-      <nav class="site-nav" id="site-nav">
-        <a href="#home" data-route>Välkommen till Lyckosvansen</a>
-        <a href="#kurser" data-route>Hundkurser privatlektioner</a>
-        <a href="#kontaktinfo" data-route>Kontaktinformation</a>
-        <a href="#om" data-route>Om Lyckosvansen AB</a>
-        <a href="#nosework" data-route>Vad är Nose Work?</a>
-        <a href="#hoopers" data-route>Vad är Hoopers?</a>
-        <a href="#anmalan" data-route>Anmälan kurs</a>
-        <a href="#blogg" data-route>Blogg</a>
-        <a href="#gallery" data-route>Galleri</a>
-      </nav>
+      <div class="site-header-inner">
+        <a class="logoandname" href="#home" data-route aria-label="Gå till Välkommen till Lyckosvansen">
+          <img id="logo" src="img/lyckosvansen_black_retriever_transparent.png" alt="Doggy icon">
+          <div class="brand">
+            <span class="brand-mark">Lyckosvansen</span>
+            <span class="brand-tag">Nose Work & Samspel</span>
+          </div>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+          Meny
+        </button>
+        <nav class="site-nav" id="site-nav">
+          <a href="#home" data-route>Välkommen</a>
+          <a href="#kurser" data-route>Kurser</a>
+          <a class="nav-featured" href="#nosework" data-route>Vad är Nose Work?</a>
+          <a href="#kontaktinfo" data-route>Kontakt</a>
+          <a href="#anmalan" data-route>Anmälan</a>
+          <div class="nav-more">
+            <button class="nav-more-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+              Mer
+            </button>
+            <div class="nav-more-menu">
+              <a href="#om" data-route>Om Lyckosvansen AB</a>
+              <a href="#hoopers" data-route>Vad är Hoopers?</a>
+              <a href="#blogg" data-route>Blogg</a>
+              <a href="#gallery" data-route>Galleri</a>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -41,10 +50,25 @@
     </main>
 
     <footer class="site-footer">
-      <div>
+      <div class="footer-brand">
         <span class="brand-mark">Lyckosvansen</span>
         <p>Nose Work, relation och glädje.</p>
       </div>
+      <address class="footer-contact-card" aria-label="Kontaktinformation">
+        <span class="footer-contact-title">Kontakt</span>
+        <span class="footer-contact-row">
+          <span>Telefonnummer</span>
+          <a href="tel:+46702154180">070-215 41 80</a>
+        </span>
+        <span class="footer-contact-row">
+          <span>Mejladress</span>
+          <a href="mailto:laila@lyckosvansen.se">laila@lyckosvansen.se</a>
+        </span>
+        <span class="footer-contact-row">
+          <span>Adress</span>
+          <span>Mällringe 7, Västerås</span>
+        </span>
+      </address>
       <div class="footer-links">
         <span>© 2026 Lyckosvansen</span>
         <span>Västerås, Sverige</span>
