@@ -537,14 +537,97 @@ figcaption,
   transform: scale(1.035);
 }
 
-.kurser-private .section-title {
-  max-width: 850px;
+.kurser-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
+  gap: 34px;
+  align-items: center;
 }
 
-.kurser-private .section-lead {
+.kurser-hero-copy {
+  max-width: 690px;
+}
+
+.kurser-hero-copy .section-lead {
+  margin-bottom: 18px;
   color: var(--navy);
-  font-size: clamp(1.18rem, 1.5vw, 1.42rem);
+  font-size: clamp(1.12rem, 1.5vw, 1.36rem);
   font-weight: 700;
+}
+
+.kurser-hero-copy p {
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
+.kurser-visual,
+.kurser-card,
+.kurser-price-card,
+.kurser-details,
+.kurser-booking {
+  overflow: hidden;
+  background: rgba(250, 246, 240, 0.92);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.kurser-visual {
+  align-self: stretch;
+}
+
+.kurser-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.kurser-visual figcaption {
+  padding: 13px 15px 15px;
+  color: var(--muted-2);
+  font-size: 0.93rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.kurser-value-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.kurser-card {
+  padding: 22px;
+  background: linear-gradient(145deg, rgba(250, 246, 240, 0.98), rgba(223, 229, 232, 0.62));
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.kurser-card:hover,
+.kurser-price-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow);
+}
+
+.kurser-card h3,
+.kurser-content h3,
+.kurser-booking h3 {
+  color: var(--navy);
+}
+
+.kurser-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.kurser-offer-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+  gap: 24px;
+  align-items: start;
 }
 
 .kurser-content,
@@ -555,11 +638,6 @@ figcaption,
   font-size: 1.02rem;
 }
 
-.kurser-content h3,
-.about-copy h3 {
-  color: var(--navy);
-}
-
 .kurser-content p,
 .about-copy p,
 .nosework-copy p,
@@ -567,13 +645,86 @@ figcaption,
   margin: 0 0 20px;
 }
 
-.kurser-price {
-  color: var(--ink);
-  font-weight: 700;
+.kurser-pricing {
+  display: grid;
+  gap: 14px;
 }
 
-.kurser-photo {
+.kurser-pricing > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.kurser-price-card {
+  padding: 20px;
+  display: grid;
+  gap: 6px;
+  background: var(--surface);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.kurser-price-card span {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.kurser-price-card strong {
+  color: var(--navy);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2rem, 2vw, 2.8rem);
+  line-height: 1;
+}
+
+.kurser-price-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.kurser-details {
   margin-top: 28px;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  background: var(--navy);
+  color: #faf6f0;
+}
+
+.kurser-details span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.kurser-details p {
+  margin: 0;
+  color: rgba(250, 246, 240, 0.86);
+  font-size: 0.95rem;
+}
+
+.kurser-booking {
+  margin-top: 28px;
+  padding: 26px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  background: linear-gradient(145deg, rgba(247, 228, 187, 0.82), rgba(250, 246, 240, 0.96));
+}
+
+.kurser-booking p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.kurser-booking .eyebrow {
+  margin-bottom: 8px;
 }
 
 .contact-details {
@@ -1082,8 +1233,23 @@ figcaption,
   }
 
   .blog-card,
-  .cta-inner {
+  .cta-inner,
+  .kurser-hero,
+  .kurser-offer-grid,
+  .kurser-booking {
     grid-template-columns: 1fr;
+  }
+
+  .kurser-visual img {
+    max-height: 520px;
+  }
+
+  .kurser-value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kurser-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .site-footer {
@@ -1160,13 +1326,18 @@ figcaption,
   .card,
   .info-block,
   .timeline-item,
-  .cta-inner {
+  .cta-inner,
+  .kurser-card,
+  .kurser-price-card,
+  .kurser-details,
+  .kurser-booking {
     padding: 20px;
   }
 
   .nosework-triptych,
   .nosework-why-grid,
-  .nosework-sport-grid {
+  .nosework-sport-grid,
+  .kurser-details {
     grid-template-columns: 1fr;
   }
 
@@ -1191,6 +1362,17 @@ figcaption,
   .gallery-grid img {
     height: auto;
     max-height: 460px;
+  }
+
+  .kurser-visual img {
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  .kurser-booking .cta-actions {
+    width: 100%;
   }
 
   .site-footer {
