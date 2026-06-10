@@ -35,6 +35,19 @@ const setMoreOpen = (isOpen) => {
   navMoreTrigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 };
 
+const ROUTE_TITLES = {
+  home: 'Lyckosvansen | Nose Work, Hoopers & privatlektioner i Västerås',
+  kurser: 'Hundkurser & Privatlektioner | Lyckosvansen',
+  nosework: 'Vad är Nose Work? | Lyckosvansen',
+  kontaktinfo: 'Kontakt | Lyckosvansen',
+  anmalan: 'Anmälan till hundkurs | Lyckosvansen',
+  om: 'Om Lyckosvansen AB | Lyckosvansen',
+  hoopers: 'Vad är Hoopers? | Lyckosvansen',
+  blogg: 'Nose Work bloggen | Lyckosvansen',
+  'blogg-ruth': 'Tävling med Ruth utanför Karlskoga | Lyckosvansen',
+  gallery: 'Galleri | Lyckosvansen'
+};
+
 const renderRoute = () => {
   if (!appMain) return;
   const route = window.location.hash.replace('#', '') || 'home';
@@ -43,6 +56,12 @@ const renderRoute = () => {
   appMain.innerHTML = '';
   appMain.appendChild(tpl.content.cloneNode(true));
   applyReveal(appMain);
+  
+  // Reset scroll position to top
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  
+  // Update document title
+  document.title = ROUTE_TITLES[route] || ROUTE_TITLES.home;
 };
 
 if (navToggle && siteNav) {
