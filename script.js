@@ -92,7 +92,19 @@ document.addEventListener('click', (event) => {
   setMoreOpen(false);
 });
 
+const initThemeToggle = () => {
+  const themeToggle = document.querySelector('#theme-toggle');
+  if (!themeToggle) return;
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+};
+
 window.addEventListener('hashchange', renderRoute);
 window.addEventListener('DOMContentLoaded', () => {
   renderRoute();
+  initThemeToggle();
 });
