@@ -45,7 +45,7 @@ const ROUTE_TITLES = {
   hoopers: 'Vad är Hoopers? | Lyckosvansen',
   blogg: 'Nose Work bloggen | Lyckosvansen',
   'blogg-ruth': 'Tävling med Ruth utanför Karlskoga | Lyckosvansen',
-  gallery: 'Galleri | Lyckosvansen'
+  // gallery: 'Galleri | Lyckosvansen'
 };
 
 const renderRoute = () => {
