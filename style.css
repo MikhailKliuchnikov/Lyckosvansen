@@ -791,6 +791,15 @@ figcaption,
   box-shadow: var(--shadow);
 }
 
+.course-item.fully-booked-course {
+  border-left-color: var(--line-strong);
+  background: linear-gradient(145deg, var(--surface), var(--slate-soft));
+}
+
+.course-item.fully-booked-course:hover {
+  transform: none;
+}
+
 .course-title {
   font-family: "Fraunces", Georgia, serif;
   font-size: 1.28rem;
@@ -851,6 +860,16 @@ figcaption,
 [data-theme="dark"] .badge-open {
   background-color: #f0b85d;
   color: #181512;
+}
+
+.badge-full {
+  background-color: var(--navy);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .badge-full {
+  background-color: var(--line-strong);
+  color: var(--ink);
 }
 
 .badge-completed {
@@ -918,12 +937,28 @@ figcaption,
   font-weight: 700;
 }
 
+.date-pill.booked {
+  background-color: var(--slate-soft);
+  color: var(--muted);
+  text-decoration: line-through;
+  opacity: 0.76;
+  border-bottom: 2px solid var(--line-strong);
+}
+
 .date-pill.completed {
   background-color: var(--slate-soft);
   color: var(--muted);
   text-decoration: line-through;
   opacity: 0.7;
   border-bottom: 2px solid var(--line);
+}
+
+.course-booking-note {
+  margin: 4px 0 0;
+  max-width: 58ch;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
 
 /* Avslutade Kurser Section */
